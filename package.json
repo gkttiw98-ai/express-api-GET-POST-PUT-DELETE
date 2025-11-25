@@ -1,0 +1,27 @@
+{
+  "name": "express-api-get-post-put-delete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkttiw98-ai/express-api-GET-POST-PUT-DELETE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/gkttiw98-ai/express-api-GET-POST-PUT-DELETE/issues"
+  },
+  "homepage": "https://github.com/gkttiw98-ai/express-api-GET-POST-PUT-DELETE#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
