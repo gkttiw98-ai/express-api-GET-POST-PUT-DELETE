@@ -1,0 +1,36 @@
+<form>
+    <label>Name*: <input id="name" type="text" name="name" required></label><br><br>
+    <label>Email*: <input id="email" type="email" name="email" required></label><br><br>
+    <label>Password*: <input id="password" type="password" name="password" required></label><br><br>
+
+    <label>Upload file1:
+        <input id="file1" type="file" name="file1" required>
+    </label><br><br>
+
+    <label>Upload file1:
+        <input id="file2" type="file" name="file1" required>
+    </label><br><br>
+
+    <button type="button" onclick="signup(event)">Signup</button>
+</form>
+
+<script>
+async function signup(e) {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("name", document.getElementById("name").value);
+    formData.append("email", document.getElementById("email").value);
+    formData.append("password", document.getElementById("password").value);
+    formData.append("file1", document.getElementById("file1").files[0]);
+    formData.append("file3", document.getElementById("file2").files[0]);
+
+    const res = await fetch("http://localhost:3000/response", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await res.json();
+    alert(JSON.stringify(result, null, 2));
+}
+</script>
